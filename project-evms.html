@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>EV Service Management System | Surendhar Jagannathan</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .project-section {
+            margin: 2rem 0;
+        }
+        .project-section h2 {
+            border-left: 3px solid #2c3e50;
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .project-section h3 {
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1rem;
+        }
+        .tech-stack {
+            background: #f8f8f8;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 3px solid #2c3e50;
+        }
+        .tech-stack span {
+            display: inline-block;
+            background: #fff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-family: monospace;
+            margin: 0.2rem;
+            border: 1px solid #ddd;
+        }
+        .metrics-box {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid #2c3e50;
+        }
+        .metrics-box ul {
+            margin-bottom: 0;
+        }
+        .back-link {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .placeholder-diagram {
+            background: #f5f5f5;
+            border: 1px dashed #ccc;
+            padding: 2rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.8rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Surendhar Jagannathan</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://linkedin.com/in/yourprofile" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/yourusername" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:suren.may99@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <article class="post">
+
+                <!-- Header -->
+                <header class="major">
+                    <span class="date">Featured Project</span>
+                    <h1>EV Service Management System<br />
+                    &amp; Role-Based Dashboards</h1>
+                    <p>A comprehensive system designed to bridge the gap between field operations and leadership,<br />
+                    delivering real-time visibility and data-driven decision-making across 400+ EV charging points.</p>
+                </header>
+
+                <!-- Placeholder for Methodology Diagram -->
+                <div class="placeholder-diagram">
+                    [ Methodology Diagram: System Architecture & User Journey Flow ]<br />
+                    <em style="font-size: 0.7rem;">(To be added: Draw.io or Canva diagram showing data flow from field teams → ServiceNow → Power BI dashboards → leadership decisions)</em>
+                </div>
+
+                <!-- Problem Section -->
+                <div class="project-section">
+                    <h2>The Problem</h2>
+                    <p>Field teams lacked real-time visibility into station health status, leading to reactive maintenance and prolonged operational downtime. Senior leadership had no unified view of key performance indicators such as Station Health Index, Mean Time to Repair (MTTR), and station utilisation across 400+ charging points.</p>
+                    <p>This information gap resulted in:</p>
+                    <ul>
+                        <li>Delayed response to station outages</li>
+                        <li>Inconsistent reporting across teams</li>
+                        <li>Missed revenue opportunities from underperforming stations</li>
+                        <li>Difficulty justifying infrastructure investments</li>
+                    </ul>
+                </div>
+
+                <!-- My Role Section -->
+                <div class="project-section">
+                    <h2>My Role</h2>
+                    <p>I served as the end-to-end system designer and developer. My responsibilities included:</p>
+                    <ul>
+                        <li><strong>Requirements Gathering:</strong> Interviewed field technicians, commercial teams, and senior leadership to identify pain points and KPIs</li>
+                        <li><strong>System Architecture:</strong> Designed the ServiceNow backend structure and data model</li>
+                        <li><strong>Dashboard Development:</strong> Built three role-specific Power BI dashboards</li>
+                        <li><strong>Data Pipeline:</strong> Implemented data transformation using Python and SQL</li>
+                        <li><strong>User Training:</strong> Trained field teams and leadership on dashboard usage</li>
+                    </ul>
+                </div>
+
+                <!-- Approach/Methodology Section -->
+                <div class="project-section">
+                    <h2>Approach &amp; Methodology</h2>
+                    
+                    <h3>Step 1: Requirements Gathering</h3>
+                    <p>Conducted workshops with field teams to understand their daily challenges—manual reporting, delayed alerts, no visibility into station health. Interviewed leadership to identify strategic KPIs needed for investment decisions.</p>
+                    
+                    <h3>Step 2: KPI Definition</h3>
+                    <p>Defined and implemented key metrics including:</p>
+                    <ul>
+                        <li><strong>Station Health Index:</strong> Composite score combining uptime, utilisation, and incident frequency</li>
+                        <li><strong>MTTR (Mean Time to Repair):</strong> Average time to resolve station issues</li>
+                        <li><strong>Utilisation Rate:</strong> Percentage of time stations were actively used</li>
+                    </ul>
+                    
+                    <h3>Step 3: System Design</h3>
+                    <p>Designed ServiceNow backend to capture all KPIs in real-time. Created three distinct dashboard layers:</p>
+                    <ul>
+                        <li><strong>Field Team Dashboard:</strong> Station-level operational status, maintenance alerts, issue tracking</li>
+                        <li><strong>Commercial Dashboard:</strong> Bidding performance, portfolio utilisation, revenue trends</li>
+                        <li><strong>Leadership Dashboard:</strong> Strategic KPIs including Station Health Index, ROI, infrastructure costs</li>
+                    </ul>
+                    
+                    <h3>Step 4: Data Pipeline Development</h3>
+                    <p>Used Python (pandas) for data transformation and cleaning. Implemented SQL queries for efficient data extraction from operational databases. Established real-time sync between ServiceNow and Power BI.</p>
+                    
+                    <h3>Step 5: Iterative Refinement</h3>
+                    <p>Conducted user acceptance testing with each stakeholder group. Refined dashboards based on feedback over 3 sprints, ensuring relevance and usability for each audience.</p>
+                </div>
+
+                <!-- Technologies Section -->
+                <div class="tech-stack">
+                    <strong>Technologies Used:</strong><br />
+                    <span>ServiceNow</span>
+                    <span>Power BI</span>
+                    <span>SQL</span>
+                    <span>Python (pandas)</span>
+                    <span>Flow Designer</span>
+                    <span>Miro</span>
+                </div>
+
+                <!-- Challenges Overcome -->
+                <div class="project-section">
+                    <h2>Challenges Overcome</h2>
+                    <ul>
+                        <li><strong>Data Silos:</strong> Integrated data from multiple sources including ServiceNow, operational databases, and financial systems into a unified view.</li>
+                        <li><strong>Stakeholder Alignment:</strong> Balanced competing priorities between field teams (granular operational data) and leadership (strategic KPIs).</li>
+                        <li><strong>Real-time Accuracy:</strong> Ensured real-time data sync without performance degradation across 400+ stations.</li>
+                        <li><strong>User Adoption:</strong> Designed intuitive dashboards and provided training to ensure adoption across all user groups.</li>
+                    </ul>
+                </div>
+
+                <!-- Outcome Section -->
+                <div class="metrics-box">
+                    <h3 style="margin-top: 0;">Outcome &amp; Impact</h3>
+                    <ul>
+                        <li><strong>30% reduction</strong> in operational downtime through proactive issue identification</li>
+                        <li><strong>£2M in strategic investments</strong> influenced by data-driven leadership decisions</li>
+                        <li><strong>Real-time visibility</strong> for field teams, enabling faster issue resolution</li>
+                        <li><strong>Improved stakeholder alignment</strong> with role-specific dashboards tailored to each audience</li>
+                        <li><strong>Reduced manual reporting</strong> by automating data collection and visualisation</li>
+                    </ul>
+                </div>
+
+                <!-- Key Learnings -->
+                <div class="project-section">
+                    <h2>Key Learnings</h2>
+                    <p>Role-specific dashboards are critical—one size does not fit all stakeholders. Field teams need actionable, granular data; leadership needs aggregated, strategic insights. Building trust through iterative refinement and continuous stakeholder feedback was essential to adoption and success.</p>
+                    <p>This project also reinforced the importance of defining clear KPIs before building any dashboard. Without alignment on what success looks like, even the most sophisticated dashboards can miss the mark.</p>
+                </div>
+
+                <!-- Future Enhancements -->
+                <div class="project-section">
+                    <h2>Future Enhancements</h2>
+                    <ul>
+                        <li>Integrate predictive maintenance alerts using machine learning models</li>
+                        <li>Add mobile app interface for field teams</li>
+                        <li>Expand dashboard to include carbon emissions tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Back to Portfolio -->
+                <div class="back-link">
+                    <ul class="actions special">
+                        <li><a href="index.html" class="button">← Back to Portfolio</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" /></li>
+                    </ul>
+                </form>
+            </section>
+            <section class="split contact">
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+4407900863214">+44 07900 863214</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto:suren.may99@gmail.com">suren.may99@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Location</h3>
+                    <p>Edinburgh, United Kingdom</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://linkedin.com/in/yourprofile" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/yourusername" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:suren.may99@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul><li>&copy; Surendhar Jagannathan</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
