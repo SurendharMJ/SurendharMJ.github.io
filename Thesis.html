@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Thesis: Bias Detection in LLMs | Surendhar Jagannathan</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .abstract-section {
+            margin: 2rem 0;
+        }
+        .abstract-section h2 {
+            border-left: 3px solid #2c3e50;
+            padding-left: 1rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .abstract-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .thesis-meta {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid #2c3e50;
+        }
+        .download-box {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Surendhar Jagannathan</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://linkedin.com/in/yourprofile" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/yourusername" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:suren.may99@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <article class="post">
+                <header class="major">
+                    <span class="date">MSc Thesis | University of Edinburgh</span>
+                    <h1>Bias Detection in Large Language Models<br />
+                    using Fairness Metrics</h1>
+                    <p>A systematic evaluation framework for identifying and quantifying bias<br />
+                    in complex language model systems</p>
+                </header>
+
+                <!-- Thesis Meta Info -->
+                <div class="thesis-meta">
+                    <p><strong>Author:</strong> Surendhar Jagannathan</p>
+                    <p><strong>Degree:</strong> MSc in Artificial Intelligence</p>
+                    <p><strong>Institution:</strong> The University of Edinburgh</p>
+                    <p><strong>Year:</strong> 2024-2025</p>
+                    <p><strong>Supervisor:</strong> [John Lee]</p>
+                </div>
+
+                <!-- Abstract Section -->
+                <div class="abstract-section">
+                    <h2>Abstract</h2>
+                    <p>This study assesses sentiment classification models, including DistilBERT, RoBERTa,
+and ELECTRA, on the Amazon Engineering, IMDB, and Voices of the Poor datasets
+to evaluate their performance, biases, and limitations. While models performed well
+on balanced datasets like Amazon and IMDB, they struggled with skewed datasets,
+especially Voices of the Poor, which is dominated by negative sentiment. Debiasing
+techniques such as counterfactual augmentation and adversarial debiasing improved
+fairness for sensitive keywords but were less effective at addressing misrepresentation
+bias and improving positive sentiment detection. The findings highlight the need for
+balanced datasets, advanced debiasing methods, and context-aware models to ensure
+equitable sentiment analysis in sensitive domains</p>
+
+                    <h2>Research Objectives</h2>
+                    <p>The research evaluates how NLP models DistilBERT, Electra, and RoBERTa operate
+on three datasets: Voices of the Poor, IMDB, and Amazon Engineering. These datasets
+cover socio-economic, entertainment, and technical topics. The research analyzes
+bias amplification alongside proxy discrimination through the examination of model
+predictions influenced by sensitive terms, including ”poor” and ”rich” [22] [18]. The
+results indicate that fair treatment must be addressed to achieve ethical performance of
+LLMs in all applications.
+The research tests five debiasing techniques: iterative data reweighting, fairness
+regularizations, knowledge distillation, adversarial debiasing, and counterfactual aug
+mentation. The methods aim to decrease proxy discrimination, along with improving
+fairness and reducing model dependence on sensitive terms throughout prediction tasks
+[39]. The study aims to develop an integrated debiasing system that yields fair results in
+critical areas while preserving all operational effectiveness [29]. The research supports
+ethical NLP by promoting model transparency, along with social impact assessments
+and dataset bias evaluations, based on societal norms [15]</p>
+
+                    <h2>Methodology</h2>
+                    <p>This research adopts an experimental and exploratory design, focusing on evaluating
+and mitigating biases in LLM models. The research workflow is depicted in a visual
+diagram in 3.1. The methodology utilizes three pre-selected datasets: Amazon Engineering, IMDB,
+and Voices of the Poor. These datasets encompass the technical, entertainment, and
+socioeconomic domains, incorporating data from the National Health Service (NHS).
+Three established natural language processing (NLP) models —DistilBERT, Electra, and
+RoBERTa —are applied to each dataset. This approach enables systematic evaluation
+of model performance and identification of potential biases.
+The bias evaluation step identifies three types of bias: misrepresentation, bias amplification, and proxy discrimination. Fairness metrics such as equalized odds and
+demographic parity are assessed in conjunction with quantitative metrics, including
+accuracy and F1-score. These results provide an initial basis for evaluating the fairness
+of the models in their unaltered state.
+To mitigate the biases that have been identified, the next step is to implement
+debiasing techniques. These methods, selected based on their ability to address specific
+aspects of bias. The trade-offs between task performance and debiasing effectiveness
+are then assessed by reevaluating the models using task-specific and fairness metrics.
+Sensitive terms, including ’rich,’ ’homeless,’ and ’poor,’ are assigned to broader
+contextual categories through an ontological framework. This process enables the
+identification of persistent biases within the datasets and improves interpretability. The
+workflow concludes with a summary of key outcomes: reduced model biases, increased
+clarity regarding the balance between performance and fairness, and explicit attention
+to ethical considerations in the analysis of socioeconomically sensitive texts.</p>
+                    
+                    <h2>Key Findings</h2>
+                    <p>The research revealed significant bias variations across model architectures and training datasets. Key findings include:</p>
+                    <ul>
+                        
+                        <li>Root cause analysis identified training data composition as the primary driver of bias</li>
+                        <li>Fairness metrics provided complementary insights requiring holistic evaluation approaches</li>
+                    </ul>
+
+                    <h2>Contributions</h2>
+                    <p>This thesis contributes a systematic framework for bias detection that can be adapted for enterprise AI systems, customer analytics, and automated decision-making platforms. The methodologies demonstrate rigorous analytical techniques for risk assessment and data integrity.</p>
+
+                    <h2>Relevance to Professional Practice</h2>
+                    <p>The evaluation frameworks and fairness considerations directly apply to ensuring data integrity in analytics projects, bias detection in customer segmentation, and ethical AI implementation in enterprise systems—areas directly relevant to my work as a AI/ML Engineer and Data Analyst .</p>
+                </div>
+
+                <!-- Download Section -->
+                <div class="download-box">
+                    <h3>Full Thesis</h3>
+                    <p>Download the complete thesis document for detailed methodology, results, and analysis.</p>
+                    <ul class="actions special">
+                        <li><a href="thesis-surendhar.pdf" class="button primary">Download PDF →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Back to Portfolio -->
+                <ul class="actions special">
+                    <li><a href="index.html" class="button">← Back to Portfolio</a></li>
+                </ul>
+
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" /></li>
+                    </ul>
+                </form>
+            </section>
+            <section class="split contact">
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+4407900863214">+44 07900 863214</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto:suren.may99@gmail.com">suren.may99@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Location</h3>
+                    <p>London, United Kingdom</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://linkedin.com/in/surendhar-jagannathan-023662226/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://https://github.com/SurendharMJ" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:suren.may99@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <div id="copyright">
+            <ul><li>&copy; Surendhar Jagannathan</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
