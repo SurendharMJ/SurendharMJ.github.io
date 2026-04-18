@@ -288,14 +288,21 @@
 
         <footer>
             <p>© 2025 Surendhar Jagannathan | Built with HTML/CSS</p>
-                <p style="margin-top: 0.5rem; font-size: 0.75rem;">
-                📅 Last updated: April 2026
-                </p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #888;">
+            📅 Last updated: <span id="lastUpdated"></span>
+            </p>
             <p style="margin-top: 0.5rem;">
-                <a href="https://github.com/SurendharMJ" style="color: #888; text-decoration: none;">GitHub</a> | 
-                <a href="https://linkedin.com/in/surendhar-jagannathan-023662226/" style="color: #888; text-decoration: none;">LinkedIn</a>
+            <a href="https://github.com/SurendharMJ" style="color: #888; text-decoration: none;">GitHub</a> | 
+            <a href="https://linkedin.com/in/yourprofile" style="color: #888; text-decoration: none;">LinkedIn</a>
             </p>
         </footer>
+
+        <script>
+            // Auto-update last modified date
+            const lastModified = new Date(document.lastModified);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('lastUpdated').textContent = lastModified.toLocaleDateString(undefined, options);
+</script>
     </div>
 </body>
 </html>
