@@ -50,6 +50,27 @@
         .contact-links a:hover {
             text-decoration: underline;
         }
+        .github-badges {
+            margin-top: 1rem;
+        }
+        .resume-button {
+            text-align: center;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+        .resume-button a {
+            background: #2c7da0;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        .resume-button a:hover {
+            background: #1a5a75;
+        }
         section {
             background: white;
             border-radius: 8px;
@@ -112,6 +133,23 @@
             border-radius: 20px;
             font-size: 0.85rem;
         }
+        .experience-list {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            list-style: none;
+        }
+        .experience-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .experience-list li:before {
+            content: "•";
+            color: #2c7da0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
         footer {
             text-align: center;
             padding: 2rem;
@@ -132,13 +170,21 @@
     <div class="container">
         <header>
             <h1>Surendhar Jagannathan</h1>
-            <div class="tagline">Data Analyst | Business Analyst | SAP Analyst</div>
+            <div class="tagline">Data Analyst | Business Analyst</div>
+            <div class="github-badges">
+                <img src="https://img.shields.io/github/followers/SurendharMJ?label=Follow&style=social" alt="GitHub followers">
+                <img src="https://img.shields.io/github/stars/SurendharMJ?label=Stars&style=social" alt="GitHub stars">
+            </div>
             <div class="contact-links">
                 <a href="https://github.com/SurendharMJ">GitHub</a> |
-                <a href="https://www.linkedin.com/in/surendhar-jagannathan-023662226/">LinkedIn</a> |
+                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
                 <a href="mailto:suren.may99@gmail.com">Email</a>
             </div>
         </header>
+
+        <div class="resume-button">
+            <a href="resume.pdf" download>📄 Download Resume (PDF)</a>
+        </div>
 
         <section>
             <h2>About Me</h2>
@@ -152,21 +198,21 @@
                 <div class="project-title">Invoice Discrepancy Detection Tool</div>
                 <div class="project-tech">Python | Pandas | Looker Studio</div>
                 <div class="project-desc">Automated invoice reconciliation tool that identifies missing invoices, extra invoices, and amount discrepancies. Reduces manual effort by 70% and shortens payment cycles from 15 to 4 days.</div>
-                <a href="https://github.com/SurendharMJ/invoice-discrepancy-tool" class="project-link">View on GitHub �</a>
+                <a href="https://github.com/SurendharMJ/invoice-discrepancy-tool" class="project-link">View on GitHub →</a>
             </div>
 
             <div class="project-card">
                 <div class="project-title">EV Charging Network Dashboard</div>
                 <div class="project-tech">Looker Studio | Google Sheets</div>
                 <div class="project-desc">Interactive dashboard visualizing EV station performance across 400+ charging points. Tracks utilisation rates (68% avg), health index, and revenue trends by region.</div>
-                <a href="https://github.com/SurendharMJ/ev-charging-dashboard" class="project-link">View on GitHub �</a>
+                <a href="https://github.com/SurendharMJ/ev-charging-dashboard" class="project-link">View on GitHub →</a>
             </div>
 
             <div class="project-card">
                 <div class="project-title">Customer Churn Analysis Dashboard</div>
                 <div class="project-tech">Tableau | Python | Kaggle Dataset</div>
                 <div class="project-desc">Analyzed 10,000+ customer records to identify churn drivers. Found month-to-month customers have 3x higher churn risk, leading to targeted retention strategies.</div>
-                <a href="https://github.com/SurendharMJ/customer-churn-analysis" class="project-link">View on GitHub �</a>
+                <a href="https://github.com/SurendharMJ/customer-churn-analysis" class="project-link">View on GitHub →</a>
             </div>
         </section>
 
@@ -188,24 +234,39 @@
         </section>
 
         <section>
-            <h2>Experience</h2>
+            <h2>Work Experience</h2>
             <p><strong>Business Analyst</strong> | Adani Total Gas Limited | Aug 2021 - Aug 2024</p>
-            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li>Managed end-to-end EV station lifecycle across 400+ charging points, achieving 99.5% operational uptime</li>
-                <li>Designed ServiceNow + Power BI dashboards reducing operational downtime by 30%</li>
-                <li>Automated invoice validation workflows, reducing billing discrepancies by 35%</li>
-                <li>Supported market auction participation, contributing to 15% revenue increase</li>
+            <ul class="experience-list">
+                <li>📊 Managed end-to-end EV station lifecycle across <strong>400+ charging points</strong>, achieving <strong>99.5% operational uptime</strong></li>
+                <li>📈 Designed ServiceNow + Power BI dashboards reducing <strong>operational downtime by 30%</strong> and influencing <strong>£2M in investments</strong></li>
+                <li>💰 Automated invoice validation workflows, reducing <strong>billing discrepancies by 35%</strong> and shortening payment cycles from <strong>15 to 4 days</strong></li>
+                <li>🏆 Supported market auction participation, contributing to <strong>15% revenue increase</strong></li>
+                <li>🔧 Processed <strong>10,000+ monthly invoices</strong> from 50+ vendors, improving cash flow by <strong>£1.2M</strong></li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="skills-list">
+                <span class="skill-tag">ServiceNow System Administrator</span>
+                <span class="skill-tag">SAP FICO Fundamentals</span>
+                <span class="skill-tag">Power BI Data Analyst</span>
+                <span class="skill-tag">Python for Data Analysis</span>
+            </div>
         </section>
 
         <section>
             <h2>Education</h2>
             <p><strong>MSc in Artificial Intelligence</strong> | University of Edinburgh | 2024-2025</p>
-            <p><strong>Bachelor of Instrumentation and Control Engineering</strong> | PSG College of Technology | First Class Distinction</p>
+            <p style="margin-top: 0.5rem;"><strong>Bachelor of Instrumentation and Control Engineering</strong> | PSG College of Technology | First Class Distinction</p>
         </section>
 
         <footer>
-            <p>� 2025 Surendhar Jagannathan | Built with HTML/CSS</p>
+            <p>© 2025 Surendhar Jagannathan | Built with HTML/CSS</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://github.com/SurendharMJ" style="color: #888; text-decoration: none;">GitHub</a> | 
+                <a href="https://linkedin.com/in/yourprofile" style="color: #888; text-decoration: none;">LinkedIn</a>
+            </p>
         </footer>
     </div>
 </body>
