@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surendhar Jagannathan | CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+            background: #eef2f5;
+            padding: 2rem;
+            line-height: 1.5;
+            color: #1a2a3a;
+        }
+
+        .cv-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #1a3a4a 0%, #2c5a6e 100%);
+            color: white;
+            padding: 2.5rem;
+        }
+
+        .name {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .contact-bar a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.85;
+        }
+
+        .contact-bar a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            width: 33%;
+            background: #f8fafc;
+            padding: 2rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .main-content {
+            width: 67%;
+            padding: 2rem;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #2c5a6e;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2c5a6e;
+            display: inline-block;
+        }
+
+        /* Skills Tags */
+        .skill-tag {
+            display: inline-block;
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin: 0.25rem;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #2c5a6e;
+            color: white;
+            border-color: #2c5a6e;
+        }
+
+        .skill-category {
+            margin-bottom: 1.25rem;
+        }
+
+        .skill-category h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1a3a4a;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Experience Items */
+        .experience-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1a3a4a;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: #2c5a6e;
+            font-size: 0.9rem;
+        }
+
+        .exp-date {
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .exp-location {
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .exp-desc {
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        .exp-desc ul {
+            margin-left: 1.2rem;
+            margin-top: 0.25rem;
+        }
+
+        .exp-desc li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Achievement Cards */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .achievement-card {
+            background: #f1f5f9;
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .achievement-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #2c5a6e;
+        }
+
+        .achievement-label {
+            font-size: 0.7rem;
+            color: #475569;
+        }
+
+        /* Project Items */
+        .project-item {
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #1a3a4a;
+        }
+
+        .project-tech {
+            font-size: 0.7rem;
+            color: #64748b;
+            font-family: monospace;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-desc {
+            font-size: 0.8rem;
+            color: #475569;
+        }
+
+        .project-link {
+            font-size: 0.7rem;
+            color: #2c5a6e;
+            text-decoration: none;
+        }
+
+        /* Certifications */
+        .cert-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .cert-issuer {
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 1rem;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .edu-school {
+            font-size: 0.8rem;
+            color: #2c5a6e;
+        }
+
+        .edu-date {
+            font-size: 0.7rem;
+            color: #64748b;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .sidebar, .main-content {
+                width: 100%;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .name {
+                font-size: 2rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+            }
+            .sidebar {
+                background: white;
+            }
+            .skill-tag {
+                background: #f0f0f0;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">Surendhar Jagannathan</div>
+            <div class="title">Data Analyst | Business Analyst | ServiceNow Consultant</div>
+            <div class="contact-bar">
+                <span>📍 London, UK</span>
+                <span>📞 +44 7900 863214</span>
+                <span>✉ suren.may99@gmail.com</span>
+                <span><a href="https://github.com/SurendharMJ">🔗 GitHub</a></span>
+                <span><a href="Linkedin.com/in/surendhar-jagannathan-023662226/">🔗 LinkedIn</a></span>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="two-column">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Summary -->
+                <div class="section">
+                    <div class="section-title">Profile</div>
+                    <p style="font-size: 0.85rem; color: #334155; margin-top: 0.5rem;">
+                        3+ years in data analytics, business intelligence, and process automation. 
+                        Increased revenue by 15%, reduced downtime by 30%. Expertise across 
+                        Power BI, ServiceNow, SAP S/4HANA, Python, SQL, and ArcGIS.
+                    </p>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="section">
+                    <div class="section-title">Technical Skills</div>
+                    
+                    <div class="skill-category">
+                        <h4>📊 Data & Analytics</h4>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Looker Studio</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Python (Pandas)</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Excel VBA</span>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>⚙️ Process & Automation</h4>
+                        <span class="skill-tag">ServiceNow (Custom Apps)</span>
+                        <span class="skill-tag">ServiceNow RPA</span>
+                        <span class="skill-tag">Power Automate</span>
+                        <span class="skill-tag">Flow Designer</span>
+                        <span class="skill-tag">Performance Analytics</span>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>🏢 Enterprise Systems</h4>
+                        <span class="skill-tag">SAP S/4HANA (FICO, MM, PM)</span>
+                        <span class="skill-tag">ServiceNow (ITSM, CMDB, HSE)</span>
+                        <span class="skill-tag">ArcGIS Pro</span>
+                        <span class="skill-tag">Jira / Confluence</span>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>🗺️ GIS & Spatial</h4>
+                        <span class="skill-tag">ArcGIS Pro</span>
+                        <span class="skill-tag">GeoPandas</span>
+                        <span class="skill-tag">Folium</span>
+                        <span class="skill-tag">ESRI REST API</span>
+                        <span class="skill-tag">Spatial SQL</span>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>📐 Methodologies</h4>
+                        <span class="skill-tag">BPMN 2.0</span>
+                        <span class="skill-tag">Agile / Scrum</span>
+                        <span class="skill-tag">Root Cause Analysis</span>
+                        <span class="skill-tag">KPI Development</span>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="section">
+                    <div class="section-title">Certifications</div>
+                    <div class="cert-item">
+                        <div class="cert-name">ServiceNow System Administrator</div>
+                        <div class="cert-issuer">Certified - 24841590</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">SAP FICO Fundamentals</div>
+                        <div class="cert-issuer">SAP Certified</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Power BI Data Analyst</div>
+                        <div class="cert-issuer">In Progress</div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <div class="section-title">Education</div>
+                    <div class="education-item">
+                        <div class="edu-degree">MSc Artificial Intelligence</div>
+                        <div class="edu-school">University of Edinburgh</div>
+                        <div class="edu-date">2024 - 2025</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="edu-degree">B.E. Instrumentation & Control</div>
+                        <div class="edu-school">PSG College of Technology</div>
+                        <div class="edu-date">First Class Distinction | GPA: 8.68</div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="section">
+                    <div class="section-title">Languages</div>
+                    <span class="skill-tag">English (Fluent)</span>
+                    <span class="skill-tag">Tamil (Native)</span>
+                    <span class="skill-tag">Hindi (Professional)</span>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Key Achievements (Visual Cards) -->
+                <div class="section">
+                    <div class="section-title">Key Achievements</div>
+                    <div class="achievement-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-number">£2M+</div>
+                            <div class="achievement-label">Project Approvals</div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-number">95%</div>
+                            <div class="achievement-label">Cost Savings</div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-number">30%</div>
+                            <div class="achievement-label">Downtime Reduction</div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-number">40%</div>
+                            <div class="achievement-label">Cycle Time Reduction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="section">
+                    <div class="section-title">Experience</div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="exp-title">Business / Data Analyst</span>
+                            <span class="exp-date">Aug 2021 - Aug 2024</span>
+                        </div>
+                        <div class="exp-company">Adani Total Gas Limited | Ahmedabad, India</div>
+                        <div class="exp-desc">
+                            <ul>
+                                <li><strong>15-20 custom ServiceNow applications</strong> developed using App Engine Studio (HSE, ITSM, FSM, Asset Management, Document Approvals, CAB Management)</li>
+                                <li><strong>ServiceNow RPA</strong> automated invoice extraction from 500+ vendors – 10,000+ monthly transactions, 80% manual effort reduction</li>
+                                <li><strong>SAP S/4HANA (FICO, MM, PM)</strong> integration with Power BI for station-level Profit and L, enabling £2M+ project approvals</li>
+                                <li><strong>ArcGIS Pro + Python (GeoPandas, Folium)</strong> mapped 500+ km of pipelines and 200+ gas stations for emergency planning</li>
+                                <li><strong>SCADA real-time data</strong> integrated into SAP – reduced downtime by 30%, enabled predictive maintenance</li>
+                                <li><strong>BPMN 2.0 process modeling</strong> in Visio, Miro, Lucidchart – reduced approval cycles by 40% across 4 verticals</li>
+                                <li><strong>Power BI + ServiceNow HSE</strong> dashboards reduced incident response time by 40%</li>
+                                <li><strong>ServiceNow Performance Analytics</strong> delivered insights on application adoption and ROI</li>
+                                <li><strong>Excel VBA macros</strong> automated MI reports – reduced generation time by 50%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Applications Developed -->
+                <div class="section">
+                    <div class="section-title">Custom Applications (ServiceNow)</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                        <span class="skill-tag">HSE Incident Reporting</span>
+                        <span class="skill-tag">ITSM Ticketing</span>
+                        <span class="skill-tag">FSM Maintenance</span>
+                        <span class="skill-tag">Asset Management</span>
+                        <span class="skill-tag">EV Service Management</span>
+                        <span class="skill-tag">Document Approvals (HLD, LLD)</span>
+                        <span class="skill-tag">CAB Management</span>
+                        <span class="skill-tag">Digital Approval System</span>
+                        <span class="skill-tag">Safety Knowledge Hub</span>
+                    </div>
+                </div>
+
+                <!-- GitHub Projects -->
+                <div class="section">
+                    <div class="section-title">Portfolio Projects</div>
+                    
+                    <div class="project-item">
+                        <div class="project-title">Invoice Discrepancy Detection Tool</div>
+                        <div class="project-tech">Python | Pandas | Looker Studio</div>
+                        <div class="project-desc">Automates PO vs invoice reconciliation, identifies missing invoices and amount mismatches.</div>
+                        <a href="https://github.com/SurendharMJ/invoice-discrepancy-tool" class="project-link">→ View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">EV Charging Network Dashboard</div>
+                        <div class="project-tech">Looker Studio | Google Sheets</div>
+                        <div class="project-desc">Visualizes 400+ charging stations with utilisation (68% avg) and revenue trends.</div>
+                        <a href="https://github.com/SurendharMJ/ev-charging-dashboard" class="project-link">→ View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">Customer Churn Analysis Dashboard</div>
+                        <div class="project-tech">Tableau | Python | SQL</div>
+                        <div class="project-desc">Analyzed 10,000+ records, identified 3x higher churn risk for month-to-month customers.</div>
+                        <a href="https://github.com/SurendharMJ/customer-churn-analysis" class="project-link">→ View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
